@@ -1,0 +1,17 @@
+
+{% extends 'main.html' %}
+{% block title %}Test{% endblock %}
+
+{% block content %}
+
+<div id="promo">
+    <div class="jumbotron text-center">
+        <h1 style="color: red;">File is Empty!!</h1>
+        <form action="/data/" method="post" enctype="multipart/form-data">
+			<center><input type=file name=file>    Only *.txt files allowed.</center>
+            <br><input type="submit" class="btn btn-primary" value="Upload & Process">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div id="promo">
+<h1>Flowchart of the algorithm</h1>
+        <div class="" ><img  src="/static/assets/img/working.png" alt=""  style=" border: #1b1e21; border-width: 2px; float:left; width: 80%; display: block; margin-left: auto; margin-right: auto; width: 50%;">
+                </div>
+</div>
+    <h2 The proposed approach includes a file splitting and merging mechanism along with Multi Threads to simultaneously encrypt files.></h2>
+<h3 style="margin-left: 800px">Steps for the algorithm</h3>
+<div id="promo" style="margin-left: 700px; padding-left: 10%;">
+<p style="padding-left: 10%;">
+<ul>
+
+<li>Load the file on the server.
+<li>Dividing the uploaded file into N parts.
+<li>Encrypting all the parts of the file using any one of the selected algorithms (Algorithm is changed with every part in round robin fashion).
+<li>The keys for cryptography algorithms is then secured using a different algorithm and the key for this algorithm is provided to the user as public key.
+</ul>
+After the above 4 steps you will have a N files which are in encrypted form which are stored on the server and a key which is downloaded as public key for decrypting the file and downloading it.
+To restore the file, follow the following steps: <br>
+<ul>
+<li>Load the key on the server.
+<li>Decrypt the keys of the algorithms.
+<li>Decrypt all the N parts of the file using the same algorithms which were used to encrypt them.
+<li>Combine all the N parts to form the original file and provide it to the user for downloading.
+</ul>
+</p>
+</div>
+
+{% endblock %}
